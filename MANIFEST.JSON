@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "Retweet with comment - Rt+C",
-  "description": "This extension allows make a retweet with a comment in Twitter page",
-  "version": "1.4",
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "2.3.2",
+  "default_locale": "en",
   "background": {
     "persistent": false,
     "page": "rtc.html"
@@ -15,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["*://twitter.com/*"],
-      "js": ["jquery-1.9.1.min.js","extern_rtc.js"],
+      "js": ["jquery-1.9.1.min.js","insQ.js","extern_rtc.js"],
       "run_at": "document_end"
     }
   ],
@@ -23,6 +24,7 @@
     "alarms",
     "tabs",
     "webNavigation",
-    "*://*.twitter.com/"
+    "*://*.twitter.com/",
+    "storage"
    ]
 }
